@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/plans.css" />
+    <link rel="stylesheet" href="src/css/header.css" />
+    <link rel="stylesheet" href="src/css/plans.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Yuji+Mai&display=swap"
       rel="stylesheet"
@@ -38,7 +38,10 @@
       </nav>
       <div class="icons">
         <a href="#"><span class="icon-search">🔍</span></a>
-        <a href="#"><span class="icon-user">👤</span></a>
+        <a href="#"
+          ><span class="icon-user"
+            ><img src="src/img/perfil.svg" class="perfil" /></span
+        ></a>
         <a href="#"
           ><span class="icon-cart">🛒</span><span class="cart-count">0</span></a
         >
@@ -78,10 +81,21 @@
           Plano individual com cuidados especiais para você.
         </p>
         <p class="plan-details">
-          Ideal para quem busca uma experiência pessoal única com produtos
-          exclusivos.
+          Plano individual perfeito para quem busca cuidados especiais e
+          produtos exclusivos. Ao se inscrever, você paga R$140 por mês e recebe
+          o dobro em produtos! Uma experiência única de bem-estar com óleos
+          essenciais puros, blends e florais de alta qualidade. Aproveite
+          descontos especiais, brindes e a chance de participar de sorteios
+          exclusivos. Experimente a transformação que o Clube de Assinatura TO
+          USE pode proporcionar para sua rotina!
         </p>
-        <button class="btn">Compre Agora</button>
+        <div class="price">R$ 140/mês</div>
+        <a
+          href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c93808493dee0a0019403d9e8600f5d"
+          name="MP-payButton"
+          class="btn"
+          >Comprar Agora</a
+        >
       </div>
 
       <div class="card">
@@ -90,20 +104,33 @@
           Plano para 2 pessoas, pensado para o bem-estar de casais.
         </p>
         <p class="plan-details">
-          Perfeito para casais que desejam compartilhar momentos de cuidados
-          especiais.
+          Este plano é feito especialmente para casais que desejam compartilhar
+          momentos de cuidados e bem-estar. Por apenas R$180 por mês, ambos
+          recebem o dobro em produtos, com óleos essenciais, blends e florais
+          feitos para promover a saúde e o equilíbrio em sua vida a dois. Além
+          disso, você terá acesso a descontos exclusivos, brindes personalizados
+          e muito mais. Transforme a experiência de cuidar de si e do outro com
+          o Clube TO USE!
         </p>
+        <div class="price">R$ 180/mês</div>
         <button class="btn">Compre Agora</button>
       </div>
 
       <div class="card">
         <h3 class="plan-title">KIT BOX MINHA FAMÍLIA</h3>
-        <p class="plan-description">
-          Plano familiar para até 5 pessoas com uma experiência completa.
-        </p>
         <p class="plan-details">
           Ideal para famílias que buscam cuidados de bem-estar juntos.
         </p>
+        <p class="plan-description">
+          Plano pensado para famílias de até 5 pessoas, oferecendo cuidados de
+          bem-estar para todos. Por apenas R$220 por mês, você recebe o dobro em
+          produtos e a oportunidade de cuidar de sua saúde e de sua família com
+          óleos essenciais puros e florais de alta qualidade. Aproveite
+          vantagens como descontos especiais, brindes exclusivos e uma
+          experiência personalizada de aromaterapia. Faça parte do Clube de
+          Assinaturas TO USE e leve o cuidado para toda a sua família!
+        </p>
+        <div class="price">R$ 220/mês</div>
         <button class="btn">Compre Agora</button>
       </div>
     </section>
@@ -113,7 +140,7 @@
         <section>
           <h2>Contato</h2>
           <ul>
-            <li>Rua Ouvidor Freiro, 1317 Centro Franco S, CEP 14400-630</li>
+            <li>Rua Ouvidor Freiro, 1317 Centro Franco Sp, CEP 14400-630</li>
             <li>WhatsApp: (06) 99-33-3736</li>
             <li>Email: sac@touse.com.br</li>
           </ul>
@@ -129,6 +156,30 @@
         <div class="copyright"></div>
       </div>
     </footer>
+
+    <script type="text/javascript">
+      (function () {
+        function $MPC_load() {
+          window.$MPC_loaded !== true &&
+            (function () {
+              var s = document.createElement("script");
+              s.type = "text/javascript";
+              s.async = true;
+              s.src =
+                document.location.protocol +
+                "//secure.mlstatic.com/mptools/render.js";
+              var x = document.getElementsByTagName("script")[0];
+              x.parentNode.insertBefore(s, x);
+              window.$MPC_loaded = true;
+            })();
+        }
+        window.$MPC_loaded !== true
+          ? window.attachEvent
+            ? window.attachEvent("onload", $MPC_load)
+            : window.addEventListener("load", $MPC_load, false)
+          : null;
+      })();
+    </script>
+    
   </body>
-  
 </html>
