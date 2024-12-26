@@ -1,0 +1,138 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #ffffff;
+  padding-top: 60px; /* Espaço reservado para a navbar fixa */
+}
+
+/* Navbar */
+.navbar {
+  position: fixed; /* Fixa a navbar no topo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease; /* Suavidade */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+}
+
+.navbar:hover {
+  background-color: #f5f1e5; /* Sólido ao passar o mouse */
+}
+
+.logo-img {
+  height: 40px;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu li {
+  position: relative;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 10px 15px;
+  display: block;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(245, 241, 229, 0.95);
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.menu .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 5px 20px;
+}
+
+.dropdown-menu li a {
+  color: #333;
+}
+
+.dropdown-menu li a:hover {
+  color: #007bff;
+}
+
+/* Ícones */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icons .icon {
+  font-size: 20px;
+  color: #333;
+}
+
+.icons .cart-count {
+  position: relative;
+  top: -10px;
+  left: -10px;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+footer {
+  background-color: #f0f0f0;
+  padding: 30px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+.copyright {
+  margin-top: 10px;
+  font-size: 12px;
+}
