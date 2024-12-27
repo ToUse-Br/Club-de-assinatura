@@ -17,13 +17,30 @@
   <body>
     <header class="navbar">
       <div class="logo">
-        <img src="logo.png" alt="Logo" />
+        <img src="src/img/logo-removebg-preview.svg" alt="Logo" />
       </div>
       <nav>
         <ul class="menu">
-          <li><a href="#">Óleos Essenciais</a></li>
-          <li><a href="#">Blends de Óleos</a></li>
-          <li><a href="#">Florais de Bach</a></li>
+          <li>
+            <a href="https://www.touse.com.br/oleos-essenciais/"
+              >Óleos Essenciais</a
+            >
+          </li>
+          <li class="dropdown">
+            <a href="#">Blends de Óleos</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Bebês e Crianças</a></li>
+              <li><a href="#">Jovens e Adultos</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Florais de Bach</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Jovens e Adultos</a></li>
+              <li><a href="#">Bebês e Crianças</a></li>
+              <li><a href="#">PETS</a></li>
+            </ul>
+          </li>
           <li><a href="#">Kits Promocionais</a></li>
           <li class="dropdown">
             <a href="#">Ver Tudo</a>
@@ -90,12 +107,12 @@
           USE pode proporcionar para sua rotina!
         </p>
         <div class="price">R$ 140/mês</div>
-        <a
-          href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c93808493dee0a0019403d9e8600f5d"
-          name="MP-payButton"
+        <button
           class="btn"
-          >Comprar Agora</a
+          onclick="openModal('https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c93808493dee0a0019403d9e8600f5d')"
         >
+          Comprar Agora
+        </button>
       </div>
 
       <div class="card">
@@ -113,7 +130,12 @@
           o Clube TO USE!
         </p>
         <div class="price">R$ 180/mês</div>
-        <button class="btn">Compre Agora</button>
+        <button
+          class="btn"
+          onclick="openModal('https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c93808493dee0900194080424d01100')"
+        >
+          Comprar Agora
+        </button>
       </div>
 
       <div class="card">
@@ -131,29 +153,74 @@
           Assinaturas TO USE e leve o cuidado para toda a sua família!
         </p>
         <div class="price">R$ 220/mês</div>
-        <button class="btn">Compre Agora</button>
+        <button
+          class="btn"
+          onclick="openModal('https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c93808493dee0d0019408069e54113a')"
+        >
+          Comprar Agora
+        </button>
       </div>
     </section>
 
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="close-btn" class="close-btn">&times;</span>
+        <iframe
+          id="modal-iframe"
+          src=""
+          frameborder="0"
+          style="width: 100%; height: 400px"
+        ></iframe>
+      </div>
+    </div>
+
     <footer>
       <div class="container">
-        <section>
-          <h2>Contato</h2>
-          <ul>
-            <li>Rua Ouvidor Freiro, 1317 Centro Franco Sp, CEP 14400-630</li>
-            <li>WhatsApp: (06) 99-33-3736</li>
-            <li>Email: sac@touse.com.br</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Cadastre-se em nossa Newsletter</h2>
-          <form>
-            <input type="email" placeholder="Seu email" />
-            <button type="submit">Inscreva-se</button>
-          </form>
-        </section>
-        <div class="social-media"></div>
-        <div class="copyright"></div>
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Contato</h3>
+            <p>
+              <strong>Endereço:</strong> Rua Guidorizzi Primo, 307, Centro - SP,
+              CEP 01022-020<br />
+              <strong>WhatsApp:</strong> (11) 99433-3768<br />
+              <strong>Email:</strong> sac@seusite.com.br
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h3>Institucional</h3>
+            <ul>
+              <li><a href="#">Sobre Nós</a></li>
+              <li><a href="#">Redes Sociais</a></li>
+              <li><a href="#">Segurança e Privacidade</a></li>
+              <li><a href="#">Termos de Uso</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3>Para Você</h3>
+            <ul>
+              <li><a href="#">Minha Conta</a></li>
+              <li><a href="#">Meus Pedidos</a></li>
+              <li><a href="#">Lista de Desejos</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p>&copy; 2023 Todos os direitos reservados.</p>
+            <ul class="social-icons">
+              <li>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
 
@@ -179,7 +246,72 @@
             : window.addEventListener("load", $MPC_load, false)
           : null;
       })();
+
+      (function () {
+        function $MPC_load() {
+          window.$MPC_loaded !== true &&
+            (function () {
+              var s = document.createElement("script");
+              s.type = "text/javascript";
+              s.async = true;
+              s.src =
+                document.location.protocol +
+                "//secure.mlstatic.com/mptools/render.js";
+              var x = document.getElementsByTagName("script")[0];
+              x.parentNode.insertBefore(s, x);
+              window.$MPC_loaded = true;
+            })();
+        }
+        window.$MPC_loaded !== true
+          ? window.attachEvent
+            ? window.attachEvent("onload", $MPC_load)
+            : window.addEventListener("load", $MPC_load, false)
+          : null;
+      })();
+
+      (function () {
+        function $MPC_load() {
+          window.$MPC_loaded !== true &&
+            (function () {
+              var s = document.createElement("script");
+              s.type = "text/javascript";
+              s.async = true;
+              s.src =
+                document.location.protocol +
+                "//secure.mlstatic.com/mptools/render.js";
+              var x = document.getElementsByTagName("script")[0];
+              x.parentNode.insertBefore(s, x);
+              window.$MPC_loaded = true;
+            })();
+        }
+        window.$MPC_loaded !== true
+          ? window.attachEvent
+            ? window.attachEvent("onload", $MPC_load)
+            : window.addEventListener("load", $MPC_load, false)
+          : null;
+      })();
+
+      const modal = document.getElementById("modal");
+      const closeBtn = document.getElementById("close-btn");
+      const iframe = document.getElementById("modal-iframe");
+
+      function openModal(url) {
+        iframe.src = url;
+        modal.style.display = "block";
+      }
+
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+        iframe.src = ""; // Limpa o iframe ao fechar o modal
+      });
+
+      window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+          iframe.src = "";
+        }
+      });
     </script>
-    
   </body>
 </html>
+

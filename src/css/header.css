@@ -30,8 +30,8 @@ body {
   background-color: #f5f1e5; /* Sólido ao passar o mouse */
 }
 
-.logo-img {
-  height: 40px;
+.logo img {
+  height: 50px;
 }
 
 /* Menu */
@@ -53,6 +53,11 @@ body {
   font-size: 16px;
   padding: 10px 15px;
   display: block;
+}
+
+.menu :hover {
+  color: #007bff; /* Cor do texto ao passar o mouse */
+  border-bottom: 2px solid #007bff; /* Barra inferior na cor do texto */
 }
 
 /* Dropdown */
