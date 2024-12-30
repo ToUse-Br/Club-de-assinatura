@@ -1,0 +1,88 @@
+/* Estilo geral do formulário */
+.form-container {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .customerForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .customerForm label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .customerForm input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s;
+  }
+  
+  .customerForm input:focus {
+    border-color: #6c5ce7;
+    outline: none;
+  }
+  
+  .customerForm .btn {
+    padding: 12px;
+    background-color: #6c5ce7;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .customerForm .btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .customerForm .btn:hover:not(:disabled) {
+    background-color: #4e44d1;
+  }
+  
+  /* Estilos para a disposição do formulário */
+  .form-container h4 {
+    font-size: 20px;
+    color: #ff0707;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .card {
+    margin-bottom: 30px;
+  }
+  
+  .card .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2d3436;
+    margin-top: 15px;
+  }
+  
+  .card .btn {
+    background-color: #00b894;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .card .btn:hover {
+    background-color: #098a6e;
+  }
+  

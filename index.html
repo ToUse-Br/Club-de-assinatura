@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="src/css/header.css" />
     <link rel="stylesheet" href="src/css/plans.css" />
+    <link rel="stylesheet" href="src/css/form.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Yuji+Mai&display=swap"
       rel="stylesheet"
@@ -107,14 +108,27 @@
           USE pode proporcionar para sua rotina!
         </p>
         <div class="price">R$ 140/mês</div>
-        <button
-          class="btn"
-          onclick="openModal('https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c93808493dee0a0019403d9e8600f5d')"
-        >
-          Comprar Agora
-        </button>
+        
+        <!-- Botão "Comprar Agora" -->
+        <button class="btn" onclick="showForm(this)">Comprar Agora</button>
+    
+        <!-- Formulário oculto até o botão ser clicado -->
+        <div class="form-container" style="display: none;">
+          <form class="customerForm">
+            <label for="name">Nome:</label>
+            <input type="text" class="name" required><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" class="email" required><br>
+            
+            <!-- Botão de compra desabilitado -->
+            <button type="button" class="btn" id="finalizeBtn" disabled onclick="openModal('https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c93808493dee0a0019403d9e8600f5d')">Finalizar Compra</button>
+          </form>
+        </div>
       </div>
-
+    
+      <!-- Repita a estrutura para os outros planos -->
+      <!-- KIT BOX VIDA DE CASAL -->
       <div class="card">
         <h3 class="plan-title">KIT BOX VIDA DE CASAL</h3>
         <p class="plan-description">
@@ -130,14 +144,26 @@
           o Clube TO USE!
         </p>
         <div class="price">R$ 180/mês</div>
-        <button
-          class="btn"
-          onclick="openModal('https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c93808493dee0900194080424d01100')"
-        >
-          Comprar Agora
-        </button>
+        
+        <!-- Botão "Comprar Agora" -->
+        <button class="btn" onclick="showForm(this)">Comprar Agora</button>
+    
+        <!-- Formulário oculto até o botão ser clicado -->
+        <div class="form-container" style="display: none;">
+          <form class="customerForm">
+            <label for="name">Nome:</label>
+            <input type="text" class="name" required><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" class="email" required><br>
+            
+            <!-- Botão de compra desabilitado -->
+            <button type="button" class="btn" id="finalizeBtn" disabled onclick="openModal('https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c93808493dee0900194080424d01100')">Finalizar Compra</button>
+          </form>
+        </div>
       </div>
-
+    
+      <!-- KIT BOX MINHA FAMÍLIA -->
       <div class="card">
         <h3 class="plan-title">KIT BOX MINHA FAMÍLIA</h3>
         <p class="plan-details">
@@ -153,14 +179,26 @@
           Assinaturas TO USE e leve o cuidado para toda a sua família!
         </p>
         <div class="price">R$ 220/mês</div>
-        <button
-          class="btn"
-          onclick="openModal('https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c93808493dee0d0019408069e54113a')"
-        >
-          Comprar Agora
-        </button>
+        
+        <!-- Botão "Comprar Agora" -->
+        <button class="btn" onclick="showForm(this)">Comprar Agora</button>
+    
+        <!-- Formulário oculto até o botão ser clicado -->
+        <div class="form-container" style="display: none;">
+          <form class="customerForm">
+            <label for="name">Nome:</label>
+            <input type="text" class="name" required><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" class="email" required><br>
+            
+            <!-- Botão de compra desabilitado -->
+            <button type="button" class="btn" id="finalizeBtn" disabled onclick="openModal('https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c93808493dee0d0019408069e54113a')">Finalizar Compra</button>
+          </form>
+        </div>
       </div>
     </section>
+    
 
     <!-- Modal -->
     <div id="modal" class="modal">
@@ -224,94 +262,8 @@
       </div>
     </footer>
 
-    <script type="text/javascript">
-      (function () {
-        function $MPC_load() {
-          window.$MPC_loaded !== true &&
-            (function () {
-              var s = document.createElement("script");
-              s.type = "text/javascript";
-              s.async = true;
-              s.src =
-                document.location.protocol +
-                "//secure.mlstatic.com/mptools/render.js";
-              var x = document.getElementsByTagName("script")[0];
-              x.parentNode.insertBefore(s, x);
-              window.$MPC_loaded = true;
-            })();
-        }
-        window.$MPC_loaded !== true
-          ? window.attachEvent
-            ? window.attachEvent("onload", $MPC_load)
-            : window.addEventListener("load", $MPC_load, false)
-          : null;
-      })();
-
-      (function () {
-        function $MPC_load() {
-          window.$MPC_loaded !== true &&
-            (function () {
-              var s = document.createElement("script");
-              s.type = "text/javascript";
-              s.async = true;
-              s.src =
-                document.location.protocol +
-                "//secure.mlstatic.com/mptools/render.js";
-              var x = document.getElementsByTagName("script")[0];
-              x.parentNode.insertBefore(s, x);
-              window.$MPC_loaded = true;
-            })();
-        }
-        window.$MPC_loaded !== true
-          ? window.attachEvent
-            ? window.attachEvent("onload", $MPC_load)
-            : window.addEventListener("load", $MPC_load, false)
-          : null;
-      })();
-
-      (function () {
-        function $MPC_load() {
-          window.$MPC_loaded !== true &&
-            (function () {
-              var s = document.createElement("script");
-              s.type = "text/javascript";
-              s.async = true;
-              s.src =
-                document.location.protocol +
-                "//secure.mlstatic.com/mptools/render.js";
-              var x = document.getElementsByTagName("script")[0];
-              x.parentNode.insertBefore(s, x);
-              window.$MPC_loaded = true;
-            })();
-        }
-        window.$MPC_loaded !== true
-          ? window.attachEvent
-            ? window.attachEvent("onload", $MPC_load)
-            : window.addEventListener("load", $MPC_load, false)
-          : null;
-      })();
-
-      const modal = document.getElementById("modal");
-      const closeBtn = document.getElementById("close-btn");
-      const iframe = document.getElementById("modal-iframe");
-
-      function openModal(url) {
-        iframe.src = url;
-        modal.style.display = "block";
-      }
-
-      closeBtn.addEventListener("click", () => {
-        modal.style.display = "none";
-        iframe.src = ""; // Limpa o iframe ao fechar o modal
-      });
-
-      window.addEventListener("click", (event) => {
-        if (event.target === modal) {
-          modal.style.display = "none";
-          iframe.src = "";
-        }
-      });
-    </script>
+    <script type="text/javascript" src="src/scripts/mercadoPago.js"></script>
+    <script type="text/javascript" src="src/scripts/popUp.js"></script>
+    
   </body>
 </html>
-
